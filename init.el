@@ -41,4 +41,5 @@
 (el-get 'sync my-packages)
 
 (require 'init-appearance)
-;(require 'init-auto-complete)
+(require 'init-ido)
+
