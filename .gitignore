@@ -7,3 +7,4 @@ test.el~
 frame-restore-parameters
 el-get/
 themes/
+init-auto-complete.elc
