@@ -1,10 +1,9 @@
 ac-comphist.dat
-test.el~
 auto-save-list
-frame-restore-parameters/
 .session
-test.el~
 frame-restore-parameters
 el-get/
 themes/
-init-auto-complete.elc
+*.elc
+*~
+elpa/

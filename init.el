@@ -35,7 +35,7 @@
 
 (setq my-packages
       (append
-       '(auto-complete)))
+       '(auto-complete yasnippet)))
 
 ;;sync packages
 (el-get 'sync my-packages)
