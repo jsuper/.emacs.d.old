@@ -6,4 +6,5 @@ el-get/
 themes/
 *.elc
 *~
-elpa/
+.mc-lists.el
+elpa

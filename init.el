@@ -35,7 +35,7 @@
 
 (setq my-packages
       (append
-       '(auto-complete yasnippet)))
+       '(auto-complete yasnippet paredit multiple-cursors)))
 
 ;;sync packages
 (el-get 'sync my-packages)
@@ -43,3 +43,4 @@
 (require 'init-appearance)
 (require 'init-ido)
 
+(put 'upcase-region 'disabled nil)
