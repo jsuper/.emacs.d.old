@@ -8,3 +8,4 @@ themes/
 *~
 .mc-lists.el
 elpa
+eshell/
