@@ -1,28 +1,44 @@
 ;; setting emacs appearance
-;(add-to-list 'custom-theme-load-path
-;	     (expand-file-name "themes"
-;			       user-emacs-directory))
+
+
 (setq visible-bell t
       font-lock-maximum-decoration t
       color-theme-is-global t
       truncate-partial-width-windows nil)
 
+;;highlight current line
 (global-hl-line-mode 1)
+
+;;set user information 
 (setq user-mail-address "ling.java@gmail.com")
 (setq user-full-name "tony")
+
+;;enable column number
 (setq column-number-mode t)
+
+;;; enable line number
 (linum-mode t)
 (global-linum-mode t)
-(setq frame-title-format "emacs@%b")
+
+;;; setting global frame title format
+(setq frame-title-format "Tony@%b")
+
+;; diable startup message
 (setq inhibit-startup-message t)
-(setq initial-scratch-message "")
+(setq initial-scratch-message ";;This is the scratch buffer")
+
+;; hidden the toolbar and menubar
 (tool-bar-mode -1)
 (menu-bar-mode -1)
+
 (global-font-lock-mode t)
 (show-paren-mode t)
+
+;;; enable default parenthess
 (setq show-paren-style 'parenthess)
 (setq make-backup-files nil)
 
+;;; setting locale and coding
 (setq current-language-environment "UTF-8")
 (setq default-input-method "chinese-py")
 (setq locale-coding-system 'utf-8)
@@ -46,7 +62,5 @@
 (setq default-process-coding-system '(utf-8-unix . utf-8-unix)) ;进程输入输出编码
 (setq default-sendmail-coding-system 'utf-8-unix)               ;发送邮件编码
 (setq default-terminal-coding-system 'utf-8-unix)               ;终端编码
-
-;(load-theme 'default-black)
 
 (provide 'init-appearance)
