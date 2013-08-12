@@ -3,7 +3,6 @@ auto-save-list
 .session
 frame-restore-parameters
 el-get/
-themes/
 *.elc
 *~
 .mc-lists.el

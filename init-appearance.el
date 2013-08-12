@@ -1,5 +1,14 @@
 ;; setting emacs appearance
-
+;;custome themes directory
+(setq custom-theme-dir 
+      (expand-file-name "themes"
+			user-emacs-directory))
+(setq solarized-themes-dir 
+      (expand-file-name "solarized"
+			custom-theme-dir))
+(add-to-list 'load-path solarized-themes-dir)
+(add-to-list 'custom-theme-load-path solarized-themes-dir)
+(load-theme 'solarized-dark t nil)
 
 (setq visible-bell t
       font-lock-maximum-decoration t

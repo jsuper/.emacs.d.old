@@ -42,5 +42,3 @@
 
 (require 'init-appearance)
 (require 'init-ido)
-
-(put 'upcase-region 'disabled nil)
