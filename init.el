@@ -35,7 +35,7 @@
 
 (setq my-packages
       (append
-       '(auto-complete yasnippet paredit multiple-cursors)))
+       '(el-get auto-complete yasnippet paredit multiple-cursors eclim)))
 
 ;;sync packages
 (el-get 'sync my-packages)
