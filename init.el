@@ -42,3 +42,4 @@
 
 (require 'init-appearance)
 (require 'init-ido)
+(require 'init-java-mode)
