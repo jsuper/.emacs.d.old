@@ -35,7 +35,7 @@
 
 (setq my-packages
       (append
-       '(el-get auto-complete yasnippet paredit multiple-cursors)))
+       '(el-get auto-complete yasnippet paredit multiple-cursors cl-lib magit)))
 
 ;;sync packages
 (el-get 'sync my-packages)
