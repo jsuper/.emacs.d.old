@@ -33,9 +33,23 @@
 ;;add default el-get recipes path
 (add-to-list 'el-get-recipe-path el-get-recipes-path)
 
+(setq el-get-sources
+      '(
+	(:name go-autocomplete
+	       :type http
+	       :localname "go-autocomplete.el"
+	       :pkgname "go-autocomplete"
+	       :url "https://raw.github.com/nsf/gocode/master/emacs/go-autocomplete.el"
+	       :shallow nil
+	       :description "Golang auto complete")
+	))
+
 (setq my-packages
       (append
        '(el-get auto-complete yasnippet paredit multiple-cursors)))
+
+(defun --require (pkgname)
+  (el-get-init pkgname))
 
 ;;sync packages
 (el-get 'sync my-packages)
@@ -43,3 +57,4 @@
 (require 'init-appearance)
 (require 'init-ido)
 (require 'init-java-mode)
+(require 'init-python)
