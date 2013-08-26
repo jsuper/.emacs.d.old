@@ -16,7 +16,7 @@
       truncate-partial-width-windows nil)
 
 ;;highlight current line
-(global-hl-line-mode 1)
+;(global-hl-line-mode 1)
 
 ;;set user information 
 (setq user-mail-address "ling.java@gmail.com")
@@ -71,5 +71,7 @@
 ;;(setq default-process-coding-system '(utf-8-unix . utf-8-unix)) ;进程输入输出编码
 ;;(setq default-sendmail-coding-system 'utf-8-unix)               ;发送邮件编码
 ;;(setq default-terminal-coding-system 'utf-8-unix)               ;终端编码
+
+(global-set-key (kbd "C-SPC") nil)
 
 (provide 'init-appearance)
