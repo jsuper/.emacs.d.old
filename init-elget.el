@@ -48,7 +48,7 @@
 
 (setq my-packages
       (append
-       '(el-get auto-complete yasnippet paredit multiple-cursors solarized-theme jedi)))
+       '(el-get auto-complete yasnippet paredit multiple-cursors solarized-theme jedi org-mode)))
 
 (defun --require (pkgname)
   (el-get-init pkgname))
@@ -56,4 +56,4 @@
 ;;sync packages
 (el-get 'sync my-packages)
 
-(provide 'init-el-get)
+(provide 'init-elget)
