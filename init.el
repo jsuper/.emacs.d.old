@@ -46,7 +46,7 @@
 
 (setq my-packages
       (append
-       '(el-get auto-complete yasnippet paredit multiple-cursors)))
+       '(el-get auto-complete yasnippet paredit multiple-cursors solarized-theme)))
 
 (defun --require (pkgname)
   (el-get-init pkgname))
