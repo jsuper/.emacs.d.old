@@ -1,8 +1,10 @@
 ;; configure for yasnippet
 (require 'yasnippet)
 
-(setq yas/snippet-dirs (expand-file-name "snippets"
-					  user-emacs-directory))
+(setq yas/snippet-dirs (list (expand-file-name "yasnippet/snippets"
+					       el-get-root-dir)
+			     (expand-file-name "snippets"
+					       user-emacs-directory)))
 
 (yas/global-mode 1)
 (define-key yas/keymap (kbd "<return>") 'yas/exit-all-snippets)
