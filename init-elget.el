@@ -44,11 +44,18 @@
 	       :url "https://raw.github.com/nsf/gocode/master/emacs/go-autocomplete.el"
 	       :shallow nil
 	       :description "Golang auto complete")
+	(:name enhanced-editor
+	       :type github
+	       :pkgname "jsuper/enhanced-editor"
+	       :branch "master"
+	       :description "Enhanced emacs editor for programmer"
+	       :load-path (".")
+	       :autoloads "enhanced-editor-setup")
 	))
 
 (setq my-packages
       (append
-       '(el-get auto-complete yasnippet paredit multiple-cursors solarized-theme jedi org-mode)))
+       '(el-get auto-complete yasnippet paredit multiple-cursors solarized-theme jedi org-mode enhanced-editor)))
 
 (defun --require (pkgname)
   (el-get-init pkgname))
