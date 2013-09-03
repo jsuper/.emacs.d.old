@@ -1,6 +1,6 @@
 
 ;configuration for org-mode
-
+(require 'org-publish-setting)
 (global-font-lock-mode t)
 
 ;; org-mode colors
@@ -10,3 +10,5 @@
         ("DONE" . (:foreground "green" :weight bold))
         ("IMPEDED" . (:foreground "red" :weight bold))
         ))
+
+(provide 'init-org-mode)
