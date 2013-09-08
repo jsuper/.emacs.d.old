@@ -37,6 +37,12 @@
 
 (setq el-get-sources
       '(
+	(:name org-jekyll-mode
+	       :type github
+	       :pkgname "jsuper/org-jekyll"
+	       :branch "master"
+	       :description "Publish org-mode files to jekyll blog post"
+	       :load-path ("."))
 	(:name go-autocomplete
 	       :type http
 	       :localname "go-autocomplete.el"

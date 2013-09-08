@@ -11,8 +11,6 @@
         ("IMPEDED" . (:foreground "red" :weight bold))
         ))
 (defun org-mode-hook-setting ()
-  
-  ;;enable Auto indent mode when enter org-mode
   (org-indent-mode t))
 
 (add-hook 'org-mode-hook 'org-mode-hook-setting)
