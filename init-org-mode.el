@@ -1,6 +1,4 @@
-;;init org-jekyll-mode
 (--require "org-jekyll-mode")
-
 ;;add org-jekyll-mode settings file to here
 (defvar local-settings-files (expand-file-name ".org-jekyll-setting.el"
 					       user-emacs-directory)
