@@ -1,6 +1,16 @@
+;;init org-jekyll-mode
+(require 'org-jekyll-mode)
 
+;;add org-jekyll-mode settings file to here
+(defvar local-settings-files (expand-file-name ".org-jekyll-setting.el"
+					       user-emacs-directory)
+  "Define the machine-independent settings")
+
+(if (file-exists-p local-settings-files)
+    (load-file local-settings-files))
+
+(org-jekyll/publish-project)
 ;configuration for org-mode
-
 (global-font-lock-mode t)
 
 ;; org-mode colors

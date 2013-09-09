@@ -39,7 +39,7 @@
       '(
 	(:name org-jekyll-mode
 	       :type github
-	       :pkgname "jsuper/org-jekyll"
+	       :pkgname "jsuper/org-jekyll-mode"
 	       :branch "master"
 	       :description "Publish org-mode files to jekyll blog post"
 	       :load-path ("."))
@@ -61,7 +61,7 @@
 
 (setq my-packages
       (append
-       '(el-get auto-complete yasnippet paredit multiple-cursors solarized-theme jedi org-mode enhanced-editor)))
+       '(el-get auto-complete yasnippet paredit multiple-cursors solarized-theme jedi org-jekyll-mode org-mode enhanced-editor)))
 
 (defun --require (pkgname)
   (el-get-init pkgname))
