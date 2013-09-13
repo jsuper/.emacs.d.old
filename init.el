@@ -7,3 +7,4 @@
 (require 'init-ido)
 (require 'init-java-mode)
 (require 'init-python)
+(require 'init-golang)
