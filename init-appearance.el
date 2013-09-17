@@ -15,6 +15,10 @@
 ;;highlight current line
 ;(global-hl-line-mode 1)
 
+;;set default tab with
+(setq tab-width 4)
+(scroll-lock-mode t)
+
 ;;set user information 
 (setq user-mail-address "ling.java@gmail.com")
 (setq user-full-name "tony")

@@ -49,27 +49,14 @@
 	       :branch "master"
 	       :description "Enhanced emacs editor for programmer"
 	       :load-path (".")
-	       :autoloads "enhanced-editor-setup")
-	(:name gocode
-	       :description "Golang autocompletion"
-	       :type github
-	       :url-type https
-	       :pkgname "nsf/gocode"
-	       :depends (auto-complete go-mode)
-	       :load-path "emacs"
-	       :build (("go" "build"))
-	       :feature (gocode)
-	       :prepare (progn
-			  (add-to-list 'exec-path 
-				       (el-get-package-directory "gocode"))))
-	))
+	       :autoloads "enhanced-editor-setup")))
 
 (setq my-packages
       (append
        '(el-get auto-complete yasnippet paredit 
 		multiple-cursors solarized-theme jedi 
 		org-jekyll-mode org-mode enhanced-editor
-		go-mode gocode)))
+		go-mode go-autocomplete)))
 
 (defun --require (pkgname)
   (el-get-init pkgname))
