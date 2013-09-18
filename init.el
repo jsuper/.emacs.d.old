@@ -8,3 +8,6 @@
 (require 'init-java-mode)
 (require 'init-python)
 (require 'init-golang)
+(require 'init-web-dev)
+(require 'init-key-binding)
+(require 'init-lisp-mode)
