@@ -43,6 +43,11 @@
 	       :branch "master"
 	       :description "Publish org-mode files to jekyll blog post"
 	       :load-path ("."))
+	(:name web-mode
+	       :type github
+	       :pkgname "fxbois/web-mode"
+	       :description "Emacs major mode for editing html templates"
+	       :load-path ".")
 	(:name enhanced-editor
 	       :type github
 	       :pkgname "jsuper/enhanced-editor"
@@ -56,7 +61,9 @@
        '(el-get auto-complete yasnippet paredit 
 		multiple-cursors solarized-theme jedi 
 		org-jekyll-mode org-mode enhanced-editor
-		go-mode go-autocomplete)))
+		go-mode go-autocomplete expand-region
+		zencoding-mode js2-mode web-mode
+		)))
 
 (defun --require (pkgname)
   (el-get-init pkgname))
