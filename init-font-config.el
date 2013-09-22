@@ -1,11 +1,12 @@
 ;configure emacs font
 ;; avaiable font list pair, can work correctly in org-mode
-(setq emacs-font-list '((
-			 ("Consolas" 11) ;;en font name and size
-			 ("Microsoft YaHei" 16)) ;; han font name and size
+(defvar emacs-font-list '((
+			 ("Consolas" 10) ;;en font name and size
+			 ("Microsoft YaHei" 14)) ;; han font name and size
 			(
-			 ("DejaVu Sans Mono" 10) 
-			 ( "WenQuanYi Micro Hei" 16))))
+			 ("DejaVu Sans Mono" 9) 
+			 ("WenQuanYi Micro Hei" 14)))
+  "Emacs font list: en font and han font pair")
 
 (defun font-existp (font-name)
   "check the given font-name is installed in curren system"
@@ -17,13 +18,13 @@
   "configure the emacs fonts"
   (catch 'loop
     (dolist (font-pair emacs-font-list)
-      (let ((en-font-list (car font-pair))
-	    (han-font-list (first (cdr font-pair))))
-	(let ((en-font-name (car en-font-list))
-	      (en-font-size (first (cdr en-font-list)))
-	      (han-font-name (car han-font-list))
-	      (han-font-size (first (cdr han-font-list))))
-	  (if (and (font-existp en-font-name)
+      (let* ((en-font-list (car font-pair))
+	     (han-font-list (first (cdr font-pair)))
+	     (en-font-name (car en-font-list))
+	     (en-font-size (first (cdr en-font-list)))
+	     (han-font-name (car han-font-list))
+	     (han-font-size (first (cdr han-font-list))))
+	(if (and (font-existp en-font-name)
 		   (font-existp han-font-name))
 	      (progn 
 		(set-face-attribute 'default nil :font (format "%s %d" en-font-name en-font-size))
@@ -31,7 +32,7 @@
 		  (set-fontset-font t
 				    charset
 				    (font-spec :family han-font-name :size han-font-size)))
-		(throw 'loop t))))))))
+		(throw 'loop t)))))))
 
 ;;start font configuration
 (emacs-font-configure)
