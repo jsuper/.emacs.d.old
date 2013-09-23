@@ -5,8 +5,6 @@
 
 (add-to-list 'command-switch-alist '("-ediff" . command-line-ediff))
 
-(setq ediff-split-window-function (if (> (frame-width) 150)
-				      'split-window-horizontally
-				    'split-window-vertically))
+(setq ediff-split-window-function 'split-window-horizontally)
 
 (provide 'init-ediff)
