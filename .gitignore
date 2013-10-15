@@ -11,4 +11,9 @@ eshell/
 /libpeerconnection.log
 bookmarks/
 bookmarks
+.emacs.keyfreq
+.recentf
+ede-projects.el
+history
+.emacs.desktop
 .org-jekyll-setting.el

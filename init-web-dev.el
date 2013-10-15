@@ -6,8 +6,8 @@
   (zencoding-mode t)
   (local-unset-key "TAB")
   (local-set-key (kbd "C-c e") 'zencoding-expand-line)
-  (local-set-key (kbd "C-x e") 'yas-expand))
+  (local-set-key (kbd "C-x e") 'yas-expand)
+  (local-set-key "T" nil))
 
 (add-hook 'web-mode-hook 'my-web-dev-settings)
-
 (provide 'init-web-dev)
