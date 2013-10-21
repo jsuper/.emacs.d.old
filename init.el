@@ -12,3 +12,11 @@
 (require 'init-web-dev)
 (require 'init-key-binding)
 (require 'init-lisp-mode)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; configure emacs to startup as server-mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(when (require 'server nil 'noerror)
+  (unless (get-process "server")
+      (server-start)))
