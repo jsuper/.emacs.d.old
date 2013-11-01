@@ -74,6 +74,13 @@
 (setq ring-bell-function 'ignore)
 (setq print-escape-newlines t)
 
+;;; diable the C-SPACE key-binding
 (global-set-key (kbd "C-SPC") nil)
+
+;;; set default tab-width
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+(setq indent-line-function 'insert-tab)
+(add-to-list 'tab-stop-list 4)
 
 (provide 'init-appearance)

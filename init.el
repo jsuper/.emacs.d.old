@@ -6,7 +6,6 @@
 (require 'init-font-config)
 (require 'init-appearance)
 (require 'init-ido)
-(require 'init-java-mode)
 (require 'init-python)
 (require 'init-golang)
 (require 'init-web-dev)
