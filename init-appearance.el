@@ -10,7 +10,7 @@
 (setq visible-bell t
       font-lock-maximum-decoration t
       color-theme-is-global t
-      truncate-partial-width-windows nil)
+      truncate-partial-width-windows 80)
 
 ;;highlight current line
 ;(global-hl-line-mode 1)
