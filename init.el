@@ -11,7 +11,7 @@
 (require 'init-web-dev)
 (require 'init-key-binding)
 (require 'init-lisp-mode)
-
+(require 'init-ange-ftp)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; configure emacs to startup as server-mode
