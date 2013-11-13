@@ -83,4 +83,6 @@
 (setq indent-line-function 'insert-tab)
 (add-to-list 'tab-stop-list 4)
 
+(setq default-frame-alist '((width . 85) (height . 33)))
+
 (provide 'init-appearance)

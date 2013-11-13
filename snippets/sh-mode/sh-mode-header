@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: sh-mode-header
+# key: sh-mode-header
+# --
+#!/bin/bash
+#
+# ${1:comments}

@@ -17,8 +17,12 @@
         ("DONE" . (:foreground "green" :weight bold))
         ("IMPEDED" . (:foreground "red" :weight bold))
         ))
+
+;;org-mode settings
 (defun org-mode-hook-setting ()
-  (org-indent-mode t))
+  (org-indent-mode t)
+  (setq truncate-lines nil)
+  )
 
 (add-hook 'org-mode-hook 'org-mode-hook-setting)
 
