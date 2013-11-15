@@ -1,88 +1,80 @@
 ;; setting emacs appearance
-;;custome themes directory
-;(setq custom-theme-dir (expand-file-name "themes" user-emacs-directory))
-;
-;(setq solarized-themes-dir  (expand-file-name "solarized" custom-theme-dir))
-;(add-to-list 'load-path solarized-themes-dir)
-;(add-to-list 'custom-theme-load-path solarized-themes-dir)
-(load-theme 'solarized-dark t nil)
 
+;; set some variables 
 (setq visible-bell t
       font-lock-maximum-decoration t
       color-theme-is-global t
-      truncate-partial-width-windows 80)
+      truncate-partial-width-windows 80
+      user-mail-address "ling.java@gmail.com"
+      user-full-name "tony"
+      frame-title-format "Tony@%b"
+      column-number-mode t
+      inhibit-startup-message t
+      initial-scratch-message ";;This is the scratch buffer"
+      show-paren-style 'parenthess
+      make-backup-files nil
+      echo-keystrokes 0.1
+      x-select-enable-clipboard t
+      ring-bell-function 'ignore
+      print-escape-newlines t
+      default-frame-alist '((width . 85) (height . 33))
+      indent-line-function 'insert-tab)
+
+(setq-default current-language-environment "UTF-8"
+              default-input-method "chinese-py"
+              locale-coding-system 'utf-8
+              default-terminal-coding-system 'utf-8
+              default-file-name-coding-system 'utf-8
+              default-keyboard-coding-system 'utf-8
+              default-buffer-file-coding-system 'utf-8
+              default-sendmail-coding-system 'utf-8
+              ;;----------end coding-----------
+              )
+
+;; customize variable
+(customize-set-variable 'scroll-bar-mode nil)
 
 ;;highlight current line
 ;(global-hl-line-mode 1)
 
-;;set default tab with
-(setq tab-width 4)
 (scroll-lock-mode t)
-
-;;set user information 
-(setq user-mail-address "ling.java@gmail.com")
-(setq user-full-name "tony")
 
 ;;enable auto-fill-mode
 (auto-fill-mode)
-;;enable column number
-(setq column-number-mode t)
 
 ;;; enable line number
-(linum-mode t)
 (global-linum-mode t)
 
-;;; setting global frame title format
-(setq frame-title-format "Tony@%b")
-
-;; diable startup message
-(setq inhibit-startup-message t)
-(setq initial-scratch-message ";;This is the scratch buffer")
-
-;; hidden the toolbar and menubar
+;; disable tool bar
 (tool-bar-mode -1)
+
+;; disable menubar
 (menu-bar-mode -1)
 
+;;enable global font lock mode
 (global-font-lock-mode t)
+
+;;enable visualization of matching parens
 (show-paren-mode t)
 
-;;; enable default parenthess
-(setq show-paren-style 'parenthess)
-(setq make-backup-files nil)
-
-;;----------------------------------------------------
-;; Set default coding environment
-;;----------------------------------------------------
-(setq-default
- current-language-environment "UTF-8"
- default-input-method "chinese-py"
- locale-coding-system 'utf-8
- default-terminal-coding-system 'utf-8
- default-file-name-coding-system 'utf-8
- default-keyboard-coding-system 'utf-8
- default-buffer-file-coding-system 'utf-8
- default-sendmail-coding-system 'utf-8)
+;;; set default tab-width
+(setq-default tab-width 4
+              indent-tabs-mode nil)
+(add-to-list 'tab-stop-list 4)
 
 ;;; setting locale and coding
 (set-selection-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
-(setq echo-keystrokes 0.1)
-(customize-set-variable 'scroll-bar-mode nil)
-(setq x-select-enable-clipboard t)
+
+;;set yes-or-no-p to y-or-n-p
 (fset 'yes-or-no-p 'y-or-n-p)
+
+;; disable curso blink
 (blink-cursor-mode -1)
-(setq ring-bell-function 'ignore)
-(setq print-escape-newlines t)
 
-;;; diable the C-SPACE key-binding
-(global-set-key (kbd "C-SPC") nil)
-
-;;; set default tab-width
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 4)
-(setq indent-line-function 'insert-tab)
-(add-to-list 'tab-stop-list 4)
-
-(setq default-frame-alist '((width . 85) (height . 33)))
+;; solarized-dard has been installed from el-get and
+;; path of it has been add to load-path, so just load
+;; the theme
+(load-theme 'solarized-dark t nil)
 
 (provide 'init-appearance)
