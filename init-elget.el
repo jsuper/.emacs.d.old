@@ -48,6 +48,11 @@
 	       :pkgname "fxbois/web-mode"
 	       :description "Emacs major mode for editing html templates"
 	       :load-path ".")
+    (:name solarized-emacs
+           :type github
+           :pkgname "bbatsov/solarized-emacs"
+           :description "Solarized themes for Emacs"
+           :prepare (add-to-list 'custom-theme-load-path default-directory))
 	(:name enhanced-editor
 	       :type github
 	       :pkgname "jsuper/enhanced-editor"
@@ -59,7 +64,7 @@
 (setq my-packages
       (append
        '(el-get auto-complete yasnippet paredit 
-		multiple-cursors solarized-theme jedi 
+		multiple-cursors solarized-emacs jedi 
 		org-jekyll-mode org-mode enhanced-editor
 		go-mode go-autocomplete expand-region
 		zencoding-mode js2-mode web-mode

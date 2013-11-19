@@ -2,6 +2,6 @@
 # name: sh-mode-header
 # key: sh-mode-header
 # --
-#!/bin/bash
+#!/bin/${0:bash}
 #
 # ${1:comments}
