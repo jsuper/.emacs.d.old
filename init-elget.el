@@ -67,7 +67,7 @@
 		multiple-cursors solarized-emacs jedi 
 		org-jekyll-mode org-mode enhanced-editor
 		go-mode go-autocomplete expand-region
-		zencoding-mode js2-mode web-mode auctex)))
+		zencoding-mode js2-mode web-mode auctex powerline)))
 
 (defun --require (pkgname)
   (el-get-init pkgname))
