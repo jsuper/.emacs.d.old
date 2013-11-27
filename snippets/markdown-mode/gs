@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: gs
+# key: gs
+# description: insert screenshot for github README page
+# --
+![screenshot](${0:preview.png})
