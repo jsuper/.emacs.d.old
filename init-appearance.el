@@ -1,7 +1,9 @@
 ;; setting emacs appearance
+(require 'uniquify)
 
 ;; set some variables 
-(setq visible-bell t
+(setq uniquify-buffer-name-style 'forward 
+      visible-bell t
       font-lock-maximum-decoration t
       color-theme-is-global t
       truncate-partial-width-windows 80

@@ -13,7 +13,4 @@
 
 (setq ido-use-faces nil)
 
-;;bind C-x C-b to ido-switch-buffer
-(global-set-key (kbd "C-x C-b") 'ido-switch-buffer)
-
 (provide 'init-ido)
