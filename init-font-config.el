@@ -11,7 +11,9 @@
 (defun font-existp (font-name)
   "check the given font-name is installed in curren system"
   (interactive)
-  (if (null (x-list-fonts font-name))
+  (if (null (condition-case nil
+                (x-list-fonts font-name)
+              (error nil)))
       nil t))
 
 (defun emacs-font-configure ()
