@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: org-mode-header
+# key: org-mode-header
+# --
+#+TITLE: ${1:`(file-name-base (buffer-file-name))`}
+
+$0
