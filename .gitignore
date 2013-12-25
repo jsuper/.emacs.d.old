@@ -18,3 +18,4 @@ history
 .emacs.desktop
 .org-jekyll-setting.el
 tramp
+server/

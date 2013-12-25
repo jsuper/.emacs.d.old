@@ -64,10 +64,10 @@
 (setq my-packages
       (append
        '(el-get auto-complete yasnippet paredit 
-		multiple-cursors solarized-emacs jedi 
+		multiple-cursors jedi powerline solarized-emacs
 		org-jekyll-mode org-mode enhanced-editor
 		go-mode go-autocomplete expand-region
-		zencoding-mode js2-mode web-mode auctex powerline)))
+		zencoding-mode js2-mode web-mode)))
 
 (defun --require (pkgname)
   (el-get-init pkgname))

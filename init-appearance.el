@@ -33,8 +33,9 @@
               ;;----------end coding-----------
               )
 
-;; customize variable
-(customize-set-variable 'scroll-bar-mode nil)
+(setq  custom-file (expand-file-name "init-custom.el"
+                                    user-emacs-directory))
+(load-file custom-file)
 
 ;;highlight current line
 ;(global-hl-line-mode 1)
@@ -74,13 +75,7 @@
 ;; disable curso blink
 (blink-cursor-mode -1)
 
-;; solarized-dard has been installed from el-get and
-;; path of it has been add to load-path, so just load
-;; the theme
-;(setq solarized-distinct-fringe-background t)
-;(setq solarized-high-contrast-mode-line t)
-(el-get-init "powerline")
-(powerline-default-theme)
 (load-theme 'solarized-dark t nil)
+(my-powerline-center-theme)
 
 (provide 'init-appearance)
