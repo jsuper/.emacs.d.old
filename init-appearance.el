@@ -75,7 +75,7 @@
 ;; disable curso blink
 (blink-cursor-mode -1)
 
-(my-powerline-center-theme)
 (load-theme 'tangotango t)
+(require 'powerline)
 
 (provide 'init-appearance)

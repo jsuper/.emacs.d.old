@@ -23,6 +23,11 @@
                :pkgname "juba/color-theme-tangotango"
                :description "Tangotango emacs theme"
                :prepare (add-to-list 'custom-theme-load-path default-directory))
+        (:name emacs-powerline
+               :type github
+               :pkgname "jonathanchu/emacs-powerline"
+               :branch "master"
+               :description "Emacs powerline mode")
         (:name enhanced-editor
                :type github
                :pkgname "jsuper/enhanced-editor"
@@ -35,7 +40,7 @@
 (setq my-packages
       (append
        '(el-get auto-complete yasnippet paredit 
-		multiple-cursors jedi powerline tangotango-theme
+		multiple-cursors jedi emacs-powerline tangotango-theme
 		org-jekyll-mode org-mode enhanced-editor
 		go-mode go-autocomplete expand-region
 		zencoding-mode js2-mode web-mode)))
