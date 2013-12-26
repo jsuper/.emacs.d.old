@@ -46,7 +46,7 @@
 (auto-fill-mode)
 
 ;;; enable line number
-(global-linum-mode t)
+;;(global-linum-mode t)
 
 ;; disable tool bar
 (tool-bar-mode -1)
