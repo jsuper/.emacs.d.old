@@ -19,7 +19,7 @@
       x-select-enable-clipboard t
       ring-bell-function 'ignore
       print-escape-newlines t
-      default-frame-alist '((width . 85) (height . 33))
+      default-frame-alist '((width . 120) (height . 40))
       indent-line-function 'insert-tab)
 
 (setq-default current-language-environment "UTF-8"
