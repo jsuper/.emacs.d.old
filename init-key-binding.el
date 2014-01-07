@@ -36,4 +36,11 @@
 (when (require 'expand-region nil 'noerror)
   (global-set-key (kbd "C-=") 'er/expand-region))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;Org-mode key bindings
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Binding C-cc to org-mode capture
+(binding-key "C-c c" 'org-capture)
+
 (provide 'init-key-binding)
