@@ -4,10 +4,10 @@
 					       user-emacs-directory)
   "Define the machine-independent settings")
 
-(defvar org-mode-note-capture-file nil
+(defvar org-mode-note-capture-file "CaptureNotes.org"
   "Define the org-mode note capture file path")
 
-(defvar org-mode-todo-capture-file nil
+(defvar org-mode-todo-capture-file "Todo.org"
   "Define the org-mode TODO capture file path")
 
 ;; org-mode colors
@@ -27,4 +27,9 @@
 
 (add-hook 'org-mode-hook 'org-mode-hook-setting)
 
+(setq org-capture-templates
+      '(("t" "Todo" entry (file+headline org-mode-todo-capture-file "Tasks")
+         "* TODO %?\n %i\n")
+        ("n" "Note" entry (file org-mode-note-capture-file)
+         "** %?\n %i\n")))
 (provide 'init-org-mode)
