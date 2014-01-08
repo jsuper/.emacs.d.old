@@ -19,3 +19,4 @@ history
 .org-jekyll-setting.el
 tramp
 server/
+url/
