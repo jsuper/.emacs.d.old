@@ -8,4 +8,4 @@ automatically install all plugins.
 ## 2014.1.8 Update  
 
 Installed packages ware split as two independent packages: base-packages, advanced-packages.
-**Advanced-packages** only for users that set an environment variable named **PROGRAMMER**
+**Advanced-packages** only for users that set an environment variable named **PROGRAMER**
