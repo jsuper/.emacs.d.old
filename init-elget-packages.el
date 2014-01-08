@@ -37,12 +37,15 @@
                :autoloads "enhanced-editor-setup")))
 
 ;;All my installed packages
-(setq my-packages
-      (append
-       '(el-get auto-complete yasnippet paredit 
-		multiple-cursors jedi emacs-powerline tangotango-theme
-		org-jekyll-mode org-mode enhanced-editor
-		go-mode go-autocomplete expand-region
-		zencoding-mode js2-mode web-mode)))
+(setq base-packages
+      '(el-get emacs-powerline tangotango-theme paredit multiple-cursors expand-region))
+
+(setq advanced-packages 
+      '(auto-complete yasnippet enhanced-editor zencoding-mode js2-mode web-mode jedi 
+                      go-mode go-autocomplete org-jekyll-mode org-mode))
+
+(let* ((extra-pkg (when (getenv "PROGRAMMER")
+                    advanced-packages)))
+  (setq my-packages (append base-packages extra-pkg)))
 
 (provide 'init-elget-packages)
