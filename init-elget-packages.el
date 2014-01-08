@@ -44,7 +44,7 @@
       '(auto-complete yasnippet enhanced-editor zencoding-mode js2-mode web-mode jedi 
                       go-mode go-autocomplete org-jekyll-mode org-mode))
 
-(let* ((extra-pkg (when (getenv "PROGRAMMER")
+(let* ((extra-pkg (when (getenv "PROGRAMER")
                     advanced-packages)))
   (setq my-packages (append base-packages extra-pkg)))
 
