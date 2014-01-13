@@ -1,4 +1,7 @@
 ;; Tony customed el-get packages source definition
+(defvar ext-mark-file (expand-file-name ".ext" user-emacs-directory)
+  "Keep all extensions which user installed")
+(setq promopt-message "Do you want to load extras extensions?")
 
 (setq el-get-sources
       '(
@@ -44,8 +47,27 @@
       '(auto-complete yasnippet enhanced-editor zencoding-mode js2-mode web-mode jedi 
                       go-mode go-autocomplete org-jekyll-mode org-mode))
 
-(let* ((extra-pkg (when (getenv "PROGRAMER")
-                    advanced-packages)))
-  (setq my-packages (append base-packages extra-pkg)))
+;; By default, only install base-packages
+(setq my-packages base-packages)
+
+(defun load-extra-extension ()
+  (let ((inited-startup (file-exists-p ext-mark-file)))
+    (if inited-startup
+        ;load extra packages
+        (setq my-packages (append base-packages advanced-packages))
+      (let ((app-buffer (get-buffer-create "* Load Extensions Pakcages **")))
+        (with-current-buffer app-buffer
+          (insert "Extra packages will be installed to Emacs: \n")
+          (mapcar (lambda (app)
+                    (insert  (format "%s\n" app))) advanced-packages)
+          (setq buffer-read-only t)
+          (switch-to-buffer app-buffer)
+          (when (yes-or-no-p promopt-message)
+            (write-region (point-min) (point-max) ext-mark-file)
+            (setq my-packages (append base-packages advanced-packages)))
+          (kill-buffer))))))
+
+;; To load advanced packages by user
+(load-extra-extension)
 
 (provide 'init-elget-packages)
