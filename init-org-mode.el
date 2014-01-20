@@ -1,4 +1,6 @@
+(require 'iimage)
 (--require "org-jekyll-mode")
+
 ;;add org-jekyll-mode settings file to here
 (defvar local-settings-files (expand-file-name ".org-jekyll-setting.el"
 					       user-emacs-directory)
@@ -19,6 +21,7 @@
 
 ;;org-mode settings
 (defun org-mode-hook-setting ()
+  (iimage-mode)
   (org-indent-mode t)
   (setq truncate-lines nil))
 
