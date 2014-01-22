@@ -4,7 +4,7 @@
 (require 'slime)
 
 (setq inferior-lisp-program "/usr/bin/sbcl")
-(slime-setup)
+(slime-setup '(slime-repl slime-js))
 
 (provide 'init-slime)
 ;;slime setting end here

@@ -1,7 +1,7 @@
 ;; Configure Javascript Develop Environment
 ;; Need to download slime-js.el, place it to slime/contrib 
 ;; https://raw2.github.com/swank-js/swank-js/master/slime-js.el
-(require 'slime)
+(require 'init-slime)
 (require 'js2-mode)
 
 ;;auto active js2-mode when writing js files.
