@@ -11,5 +11,5 @@
  ;; If there is more than one, they won't work right.
  '(mode-line ((t (:background "grey22" :foreground "#FFFFFF" :box (:line-width 1 :color "#073642" :style unspecified)))))
  '(mode-line-buffer-id ((t (:foreground "#FFFFFF" :weight bold))))
- '(org-level-1 ((t (:inherit outline-1 :foreground "dodger blue" :weight bold :height 1.3))))
- '(org-level-2 ((t (:inherit outline-2 :foreground "#edd400" :weight bold :height 1.2)))))
+ '(org-level-1 ((t (:inherit outline-1 :foreground "dodger blue" :weight bold :height 1.3))) t)
+ '(org-level-2 ((t (:inherit outline-2 :foreground "#edd400" :weight bold :height 1.2))) t))
