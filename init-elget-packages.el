@@ -44,7 +44,7 @@
       '(el-get emacs-powerline tangotango-theme paredit multiple-cursors expand-region))
 
 (setq advanced-packages 
-      '(auto-complete yasnippet enhanced-editor zencoding-mode js2-mode web-mode jedi 
+      '(auto-complete yasnippet enhanced-editor zencoding-mode slime js2-mode web-mode jedi 
                       go-mode go-autocomplete org-jekyll-mode org-mode))
 
 ;; By default, only install base-packages
