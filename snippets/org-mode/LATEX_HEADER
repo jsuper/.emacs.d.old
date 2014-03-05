@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: LATEX_HEADER
+# key: TEXCN
+# --
+#+LATEX_CLASS: cn-article
+#+LATEX_CLASS_OPTIONS: [a4paper]
+#+LATEX_HEADER: \XeTeXlinebreaklocale "zh"
+#+LATEX_HEADER: \XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt 
+#+LATEX_HEADER: \setmainfont{SimSun}
+#+LATEX_HEADER: \setCJKmainfont{SimSun}
+#+LATEX_HEADER: \hypersetup{colorlinks,citecolor=black,filecolor=black,linkcolor=black,urlcolor=black,pdfborder={0 0 0}}

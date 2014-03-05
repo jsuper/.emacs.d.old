@@ -5,6 +5,7 @@
 (require 'init-common)
 (require 'init-ediff)
 (require 'init-elget)
+(require 'init-package)
 (require 'init-font-config)
 (require 'init-appearance)
 (require 'init-ido)
@@ -13,7 +14,7 @@
 (require 'init-web-dev)
 (require 'init-lisp-mode)
 (require 'init-ange-ftp)
-
+(require 'init-mew)
 ;;load key-binding after all features has been loaded.
 (require 'init-key-binding)
 

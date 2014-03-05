@@ -1,4 +1,5 @@
 (require 'iimage)
+(require 'ox-latex)
 (--require "org-jekyll-mode")
 
 ;;add org-jekyll-mode settings file to here
@@ -35,4 +36,22 @@
          "* TODO %?\n %i\n")
         ("n" "Note" entry (file org-mode-note-capture-file)
          "** %?\n %i\n")))
+
+;;add chinese article class
+(add-to-list 'org-latex-classes
+             '("cn-article"
+               "\\documentclass[11pt]{article}
+\\usepackage{xeCJK}
+[DEFAULT-PACKAGES]
+[EXTRA]" 
+                ("\\section{%s}" . "\\section*{%s}")
+                ("\\subsection{%s}" . "\\subsection*{%s}")
+                ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+                ("\\paragraph{%s}" . "\\paragraph*{%s}")
+                ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+;;set sxelatex as the default pdf process
+(setq org-latex-pdf-process 
+      '("xelatex -interaction nonstopmode -output-directory %o %f"
+        "xelatex -interaction nonstopmode -output-directory %o %f"))
+
 (provide 'init-org-mode)
