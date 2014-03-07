@@ -24,6 +24,7 @@
 (defun org-mode-hook-setting ()
   (iimage-mode)
   (org-indent-mode t)
+  (turn-on-auto-fill)
   (setq truncate-lines nil))
 
 (when (file-exists-p local-settings-files)
@@ -41,7 +42,7 @@
 (add-to-list 'org-latex-classes
              '("cn-article"
                "\\documentclass[11pt]{article}
-\\usepackage{xeCJK}
+\\usepackage[slantfont,boldfont]{xeCJK}
 [DEFAULT-PACKAGES]
 [EXTRA]" 
                 ("\\section{%s}" . "\\section*{%s}")
@@ -49,10 +50,18 @@
                 ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
                 ("\\paragraph{%s}" . "\\paragraph*{%s}")
                 ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
+;;minted settings
+;; This requires your commputer install pygments and add %PYTHON_ROOT%/scripts
+;; to you PATH
+(add-to-list 'org-latex-packages-alist '("" "minted"))
+(setq org-latex-listings 'minted)
+
 ;;set sxelatex as the default pdf process
+;;add -shell-escape to allow use minted
 (setq org-latex-pdf-process 
-      '("xelatex -interaction nonstopmode -output-directory %o %f"
-        "xelatex -interaction nonstopmode -output-directory %o %f"
-        "xelatex -interaction nonstopmode -output-directory %o %f"))
+      '("xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 
 (provide 'init-org-mode)

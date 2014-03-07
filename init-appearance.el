@@ -38,12 +38,9 @@
 (load-file custom-file)
 
 ;;highlight current line
-;(global-hl-line-mode 1)
+(global-hl-line-mode 1)
 
 (scroll-lock-mode t)
-
-;;enable auto-fill-mode
-(auto-fill-mode)
 
 ;;; enable line number
 ;;(global-linum-mode t)
@@ -74,6 +71,13 @@
 
 ;; disable curso blink
 (blink-cursor-mode -1)
+
+;; enable paste chinese
+(set-clipboard-coding-system 'euc-cn)
+
+;; enable auto-fill for some mode
+(setq default-fill-column 80)
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
 
 (load-theme 'tangotango t)
 (require 'powerline)
