@@ -1,5 +1,7 @@
 (require 'iimage)
 (require 'ox-latex)
+(require 'ox-html) ;;correct chinese paragrph
+
 (--require "org-jekyll-mode")
 
 ;;add org-jekyll-mode settings file to here
@@ -13,6 +15,27 @@
 (defvar org-mode-todo-capture-file "Todo.org"
   "Define the org-mode TODO capture file path")
 
+(defadvice org-html-paragraph (before fsh-org-html-paragraph-advice 
+                                      (paragraph contents info) activate) 
+  "Join consecutive Chinese lines into a single long line without 
+unwanted space when exporting org-mode to html." 
+  (let ((orig-contents (ad-get-arg 1)) 
+        (reg-han "[[:multibyte:]]"))
+    (ad-set-arg 1 (replace-regexp-in-string 
+                   (concat "\\(" reg-han "\\) *\n *\\(" reg-han "\\)") 
+                   "\\1\\2" orig-contents)))) 
+
+;;org-mode settings
+(defun org-mode-hook-setting ()
+  (iimage-mode)
+  (org-jekyll-mode) ;;turn on org-jekyll-mode
+  (org-indent-mode t)
+  (turn-on-auto-fill)
+  (setq truncate-lines nil))
+
+(when (file-exists-p local-settings-files)
+  (load-file local-settings-files))
+
 ;; org-mode colors
 (setq org-todo-keyword-faces
       '(
@@ -20,15 +43,8 @@
         ("DONE" . (:foreground "green" :weight bold))
         ("IMPEDED" . (:foreground "red" :weight bold))))
 
-;;org-mode settings
-(defun org-mode-hook-setting ()
-  (iimage-mode)
-  (org-indent-mode t)
-  (turn-on-auto-fill)
-  (setq truncate-lines nil))
-
-(when (file-exists-p local-settings-files)
-  (load-file local-settings-files))
+;;let org-mode highlight the source code
+(setq org-src-fontify-natively t)
 
 (add-hook 'org-mode-hook 'org-mode-hook-setting)
 
@@ -59,6 +75,7 @@
 
 ;;set sxelatex as the default pdf process
 ;;add -shell-escape to allow use minted
+
 (setq org-latex-pdf-process 
       '("xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
         "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"

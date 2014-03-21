@@ -76,6 +76,7 @@
 (set-clipboard-coding-system 'euc-cn)
 
 ;; enable auto-fill for some mode
+(set-display-table-slot standard-display-table 'wrap ?\ )
 (setq default-fill-column 80)
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 
