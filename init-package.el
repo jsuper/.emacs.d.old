@@ -18,7 +18,7 @@
           (let* ((pname (format "%s" package))
                  (psymbol (intern pname)))
             (unless (package-installed-p psymbol)
-              (package-install pname))
+              (package-install psymbol))
             ;;load init-$(package-name).el
             (when (file-exists-p (expand-file-name user-emacs-directory
                                                    (format "init-%s.el" pname)))

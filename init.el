@@ -14,7 +14,7 @@
 (require 'init-web-dev)
 (require 'init-lisp-mode)
 (require 'init-ange-ftp)
-(require 'init-mew)
+;;(require 'init-mew)
 ;;load key-binding after all features has been loaded.
 (require 'init-key-binding)
 
